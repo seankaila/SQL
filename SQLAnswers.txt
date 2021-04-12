@@ -1,20 +1,20 @@
 1) SELECT COUNT(Name) from city WHERE CountryCode = "USA";
-2) select AVG(population, LifeExpectancy) FROM country WHERE Code = 'ARG';
-3) Select Name, LifeExpectancy from country ORDER BY LifeExpectancy; (Highest = Andorra)
-4) JOIN
-5) JOIN
+2) SELECT population, LifeExpectancy FROM country WHERE Code = 'ARG';
+3) SELECT Name, LifeExpectancy from country ORDER BY LifeExpectancy; (Highest = Andorra)
+4) SELECT * FROM city ci JOIN country co ON ci.ID=co.Capital WHERE ci.CountryCode = "ESP"; (653 Madrid.)
+5) SELECT Language FROM countrylanguage cl JOIN country co ON cl.CountryCode=co.code WHERE co.Region = "Southeast Asia";
 6) SELECT Name FROM city Where Name LIKE 'f%' LIMIT 25;
 7) SELECT COUNT(Name) from city WHERE CountryCode = "CHN";
-8) SELECT Name,Population from country ORDER BY Population; (Antarctica tied with others.) 
-9)  SELECT DISTINCT Count(Name) AS 'Number of contries in db' From Country;
+8) SELECT Name,Population from country ORDER BY Population ASC; (Antarctica tied with others.) 
+9) SELECT DISTINCT Count(Name) AS 'Number of contries in db' From Country;
 10) SELECT Name, Population FROM Country ORDER BY population DESC LIMIT 10;
 11) SELECT Name, Population FROM City WHERE CountryCode = 'JPN' ORDER BY population DESC LIMIT 5;
-12) select Name, Code FROM Country WHERE HeadOfState =  'Elisabeth II';
+12) SELECT Name, Code FROM Country WHERE HeadOfState =  'Elisabeth II';
 13) SELECT Name, (Population/SurfaceArea) AS RATIO FROM Country ORDER BY RATIO LIMIT 10;
-14) Select DISTINCT Language FROM CountryLanguage; 
-15) Select Name, GNP FROM Country ORDER BY GNP DESC LIMIT 10;
-16) Select Name, SurfaceArea FROM Country ORDER BY SurfaceArea DESC LIMIT 10;
+14) SELECT DISTINCT Language FROM CountryLanguage; 
+15) SELECT Name, GNP FROM Country ORDER BY GNP DESC LIMIT 10;
+16) SELECT Name, SurfaceArea FROM Country ORDER BY SurfaceArea DESC LIMIT 10;
 17) SELECT CountryCode, Percentage From countrylanguage WHERE Percentage >= 50 && Language = 'French';
-18) Select Name, LifeExpectancy FROM Country WHERE LifeExpectancy != 'NULL' ORDER BY LifeExpectancy ASC LIMIT 1;
+18) SELECT Name, LifeExpectancy FROM Country WHERE LifeExpectancy != 'NULL' ORDER BY LifeExpectancy ASC LIMIT 1;
 19) SELECT DISTINCT GovernmentForm, Count(GovernmentForm) AS TOTAL From Country GROUP BY GovernmentForm ORDER BY TOTAL DESC;
 20) SELECT Count(IndepYear) AS IndependantCountries FROM Country WHERE IndepYear != 'NULL';
